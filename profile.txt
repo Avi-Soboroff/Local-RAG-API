@@ -1,0 +1,11 @@
+My name is Avi.
+I'm currently learning about cloud computing, AI, and DevOps.
+
+My career goal is to become a computer engineer, whether it's in those areas above or I'm in the more electrical engineering/hardware side of things.
+I'm especially interested in e.g., automation, infrastructure as code, machine learning, as well as software engineering and embedded systems design.
+
+I have experience with e.g., Python, JavaScript, AWS, C.
+I'm currently building projects on NextWork to grow my hands-on skills.
+
+For fun, I enjoy sports, travelling, and eating.
+A fun fact about me is e.g., I've been to 15 countries, I can solve a Rubik's cube.

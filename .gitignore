@@ -1,0 +1,10 @@
+# Python Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Local Chroma Database
+myRAGchromaDB/
+
+# Mac System Files
+.DS_Store
