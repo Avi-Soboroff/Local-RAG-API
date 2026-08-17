@@ -21,6 +21,10 @@ A locally hosted Retrieval Augmented Generation (RAG) API built using **FastAPI*
 ### Prerequisites
 
 1. Ensure **Ollama** is running locally on port `11434`
+
+   ```bash
+   curl http://localhost:11434
+
 2. Pull all required models:
  
    ```bash
