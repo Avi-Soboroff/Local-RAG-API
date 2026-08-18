@@ -21,13 +21,19 @@ def test_add_profile_with_fields():
     assert response_data["user_name"] == payload["user_name"]
     assert response_data["chunks_added"] == chunks
 
-# # Test GET endpoint when user parameter is used
-# def test_ask_with_user_filter():
-#     params = {"question": "What do you want to know?", "user": "TestUser"}
-#     response = client.get("/ask", params=params)
+# Test GET endpoint when user parameter is used
+def test_ask_with_user_filter():
+    params = {"question": "What do you want to know?", "user": "TestUser"}
+    response = client.get("/ask", params=params)
 
-#     assert response.status_code == 200
-#     response_data = response.json()
+    assert response.status_code == 200
+    response_data = response.json()
+    assert response_data["question"] == params["question"]
+    assert isinstance(response_data["answer"], str)
+    assert len(response_data["answer"]) > 0
+    assert isinstance(response_data["context_used"], list)
+    assert len(response_data["context_used"]) > 0
+    assert response_data["filtered_by_user"] == params["user"]
 
 # Test GET endpoint without user parameter
 def test_ask_without_user_filter():
@@ -37,4 +43,8 @@ def test_ask_without_user_filter():
     assert response.status_code == 200
     response_data = response.json()
     assert response_data["question"] == params["question"]
+    assert isinstance(response_data["answer"], str)
+    assert len(response_data["answer"]) > 0
+    assert isinstance(response_data["context_used"], list)
+    assert len(response_data["context_used"]) > 0
     assert response_data["filtered_by_user"] is None
